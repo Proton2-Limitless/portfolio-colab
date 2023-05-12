@@ -4,9 +4,7 @@ const app = require('./app')
 const server = http.createServer(app)
 require('dotenv').config()
 
-app.use(cors({
-    origin: process.env.CLIENT_URL
-}))
+app.use(cors())
 
 const port = process.env.PORT || 3030;
 const start = async () => {
